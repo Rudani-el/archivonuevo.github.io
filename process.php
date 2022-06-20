@@ -128,11 +128,11 @@ function request(
 
 $baseUrl = "https://pagostest.datafast.com.ec/df/payment.php";
 
-foreach($var as $totalBaseIva)
+foreach(get_defined_constants() as $var=> $totalBaseIva)
 	if(!is_float($totalBaseIva))
 		$totalBaseIva= number_format((float)$totalBaseIva, 2, '.', '');
 
-foreach($var as $totalBase0)
+foreach(get_defined_constants() as $var=>$totalBase0)
 	if(!is_float($totalBase0))
 		$totalBase0 = number_format((float)$totalBase0, 2, '.', '');
 
