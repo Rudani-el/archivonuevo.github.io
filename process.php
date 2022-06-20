@@ -56,6 +56,7 @@ $_SESSION['merchterm'] = $merchterm;
 
 
 //Hola Mundo
+//Seguridad.
 
 
 
