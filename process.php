@@ -158,6 +158,7 @@ $json = json_decode($responseData, true);
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="../bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../card.min.css">
+	<p>Hola mundo</p>
 </head>
 <script type='text/javascript' src="../jquery-3.2.1.js"></script>
 <script type='text/javascript' src="../bootstrap.min.js"></script>
