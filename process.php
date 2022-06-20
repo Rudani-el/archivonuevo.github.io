@@ -130,11 +130,11 @@ $baseUrl = "https://pagostest.datafast.com.ec/df/payment.php";
 
 foreach(get_defined_constants() as $var=> $totalBaseIva)
 	if(!is_float($totalBaseIva))
-		$totalBaseIva= number_format((float)$totalBaseIva, 2, '.', '');
+		echo $totalBaseIva= number_format((float)$totalBaseIva, 2, '.', '');
 
 foreach(get_defined_constants() as $var=>$totalBase0)
 	if(!is_float($totalBase0))
-		$totalBase0 = number_format((float)$totalBase0, 2, '.', '');
+		echo $totalBase0 = number_format((float)$totalBase0, 2, '.', '');
 
 $iva =  $totalBaseIva * 0.12;
 $iva =  round($iva,2);
