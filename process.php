@@ -101,10 +101,10 @@ function request(
 		
 	foreach ($items["cart"] as $c) {
 		
-		$data.= "&cart.items[".$i."].name=".$c["product_name"];
-		$data.= "&cart.items[".$i."].description="."Descripcion: ".$c["product_name"];
-		$data.= "&cart.items[".$i."].price=".$c["product_price"];
-		$data.= "&cart.items[".$i."].quantity=".$c["q"];		
+		$data.= "&cart[".$i."].name=".$c["product_name"];
+		$data.= "&cart[".$i."].description="."Descripcion: ".$c["product_name"];
+		$data.= "&cart[".$i."].price=".$c["product_price"];
+		$data.= "&cart[".$i."].quantity=".$c["q"];		
 		$i++;
 	}
 	
@@ -187,7 +187,7 @@ $json = json_decode($responseData, true);
 		</div>
 		<div class="row">
 		<div class="col-md-12 text-center">
-		<!-- <img src="../imagenes/marcas.png"> -->
+		
 		</div>
 	</div>
 	<p>Powered by <a href="http://www.datafast.com.ec/" target="_blank">Datafast</a></p>	
