@@ -100,7 +100,7 @@ function request(
 		"&customParameters[SHOPPER_VERSIONDF]=2".
 		"&customParameters[".$merchterm."]=00810030070103910004012".$valueIva."05100817913101052012".$valueTotalBase0."053012".$valueTotalIva;
 		
-	foreach ($items["cart"] as $c) {
+	foreach ($items["&cart"] as $c) {
 		
 		$data.= "&cart[".$i."].name=".$c["product_name"];
 		$data.= "&cart[".$i."].description="."Descripcion: ".$c["product_name"];
@@ -128,11 +128,11 @@ function request(
 
 $baseUrl = "https://pagostest.datafast.com.ec/df/payment.php";
 
-foreach(get_defined_constants() as $var=> $totalBaseIva)
+
 	if(!is_float($totalBaseIva))
 		echo $totalBaseIva= number_format((float)$totalBaseIva, 2, '.', '');
 
-foreach(get_defined_constants() as $var=>$totalBase0)
+
 	if(!is_float($totalBase0))
 		echo $totalBase0 = number_format((float)$totalBase0, 2, '.', '');
 
