@@ -57,7 +57,7 @@ $_SESSION['merchterm'] = $merchterm;
 
 //Hola Mundo
 //Seguridad.
-
+//Bienvenido.
 
 
 
@@ -100,15 +100,16 @@ function request(
 		"&customParameters[SHOPPER_VERSIONDF]=2".
 		"&customParameters[".$merchterm."]=00810030070103910004012".$valueIva."05100817913101052012".$valueTotalBase0."053012".$valueTotalIva;
 		
+	<?php
 	foreach ($items["cart"] as $c) {
 		
-		$data.= "cart[".$i."].name=".$c["product_name"];
-		$data.= "cart[".$i."].description="."Descripcion: ".$c["product_name"];
-		$data.= "cart[".$i."].price=".$c["product_price"];
-		$data.= "cart[".$i."].quantity=".$c["q"];		
+		$data.= "$cart[".$i."].name=".$c["product_name"];
+		$data.= "$cart[".$i."].description="."Descripcion: ".$c["product_name"];
+		$data.= "$cart[".$i."].price=".$c["product_price"];
+		$data.= "$cart[".$i."].quantity=".$c["q"];		
 		$i++;
 	}
-	
+	?>
 	$data .="&testMode=EXTERNAL";	
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $url);
